@@ -78,3 +78,18 @@ h1 {
     border-radius: 6px;
     cursor: pointer;
 }
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.completed span {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.completed {
+    opacity: 0.7;
+}

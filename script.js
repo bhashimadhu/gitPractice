@@ -15,9 +15,21 @@ function addTask() {
     li.className = "task";
 
     li.innerHTML = `
-        <span>${taskText}</span>
+        <div class="task-left">
 
-        <button class="delete-btn" onclick="deleteTask(this)">
+            <input
+                type="checkbox"
+                onchange="completeTask(this)"
+            >
+
+            <span>${taskText}</span>
+
+        </div>
+
+        <button
+            class="delete-btn"
+            onclick="deleteTask(this)"
+        >
             Delete
         </button>
     `;
@@ -25,6 +37,13 @@ function addTask() {
     taskList.appendChild(li);
 
     taskInput.value = "";
+}
+
+function completeTask(checkbox) {
+
+    const task = checkbox.parentElement.parentElement;
+
+    task.classList.toggle("completed");
 }
 
 function deleteTask(button) {
