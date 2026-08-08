@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>My Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-    body {
-        background: #222;
-        color: white;
-    }
-    </style>
+    <title>Daily Task Manager</title>
 
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>My Profile</h1>
+    <div class="container">
 
-    <p>Hello! My name is Bhashi.</p>
+        <h1>Daily Task Manager</h1>
 
-    <p>I am learning Git and GitHub.</p>
+        <p>Plan your day and stay productive.</p>
 
-    <button>Contact Me</button>
+        <div class="add-task">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a new task"
+            >
+
+            <button onclick="addTask()">
+                Add Task
+            </button>
+
+        </div>
+
+        <ul id="taskList"></ul>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
